@@ -1,0 +1,11 @@
+I am contacting you to alert you about a XSS vulnerability I found in your website. I used the payload '"><marquee><font size="7" font color="black">crabs will rule earth m8</font></marquee>' in the search bar on your website. The result was https://www.mcdonalds.com/ca/en-ca/search-results.html?q=%2522%253E%253Cmarquee%253E%253Cfont%20size%253D%25227%2522%20font%20color%253D%2522black%2522%253Ecrabs%20will%20rule%20earth%20m8%253C%252Ffont%253E%253C%252Fmarquee%253E. My payload was echoed into your website and sure enough my input, 'crabs will rule earth m8' was going across the screen of the McDonalds website. I can use this script maliciously by stealing cookies, hijacking browsers, and also I can steal data if a user with permissions happens to execute a script. This can be detrimental to your website and can lead to database leaks. I suggest you patch this as soon as possible. 
+
+
+To reproduce: 
+1. Go to the search bar on mcdonalds.com.
+2. Input the following payload into the search bar, '"><marquee><font size="7"font color="black">text xss</font></marquee>.
+3. Vulnerability should be reproduced and you should see the input text going across web page.
+
+The payload I used is NOT stored and will not cause any damage previously stated (but a different one could.) I have also not released the payload I used to prevent malicious use.
+
+cheerss
